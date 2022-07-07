@@ -75,8 +75,7 @@ public final class VoidFallingProtect extends JavaPlugin {
             if (event.getPlayer().getGameMode() == GameMode.SPECTATOR) {
                 return;
             }
-            World world = event.getPlayer().getWorld();
-            if (worldBlacklist.contains(world.getName().toLowerCase(Locale.ROOT))) {
+            if (worldBlacklist.contains(event.getPlayer().getWorld().getName().toLowerCase(Locale.ROOT))) {
                 return;
             }
             if (event.getTo().getBlockY() >= 0) {
